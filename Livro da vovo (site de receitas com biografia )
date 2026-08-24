@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livro da vovó</title>
+  </head>
+  <body>
+    <header>
+      
+      <h1> Livro da vovó</h1>
+      
+    </header>
+    <main>
+
+      <!--Criador da descrição-->
+      <p id="descricao">Nesse site você encontrará inumeras receitas com uma coisa em comum, todas elas terão aquele saber que somente as receitas do livro de receitas da vovó consegue proporcionar quando prontas. </p>
+
+      <!--Criador dos botões de navegação-->
+      <div id="botoes">
+        <button class="receitas" onclick="esconderTexto()"> Todas as Receitas </button>
+        <button class="carne" onclick="esconderTexto()"> Carne </button>
+        <button class="frango" onclick="esconderTexto()"> Frango </button>
+        <button class="peixe" onclick="esconderTexto()"> Peixe </button>
+        <button class="planta" onclick="esconderTexto()"> Vegetariana </button>
+      </div>
+
+      <!--Criador do título das categoria popular-->
+      <h2 class="comemorativa"> TÍPICAS DE FESTA JUNINA </h2>
+      
+      <!--Criador das caixas de receitas-->
+      <div class="tipicas"> 
+      <a href="arroz-doce.html" class="card">
+        <img src="https://images.pexels.com/photos/37825034/pexels-photo-37825034.jpeg" alt="Arroz Doce">
+        <h3> Arroz Doce </h3>
+      </a>
+        <a href="bolinho-caipira.html" class="card">
+          <img src="" alt="Bolinho-Caipira">
+          <h3>Bolinho Caipira</h3>
+        </a>
+        <a href="cural.html" class="card">
+          <img src="" alt="Cural">
+          <h3>Cural</h3>
+        </a>
+        <a href="cachorro-quente.html" class="card">
+          <img src="" alt="Cachorro Quente">
+          <h3> Cachorro Quente </h3>
+        </a>
+      </div>
+    </main>
+    <style>
+      /*Edição do site inteiro*/
+      body{
+        margin: 0; /*espaço EXTERNO do elemento, ou seja, o espaço entre ele 
+   e os outros elementos ao redor (fora da borda do elemento).*/
+        display: flex; /*Define como o elemento se comporta no layout*/
+        justify-content: flex-start; /*Alinha o elemento filho ao longo do eixo principal */
+        gap: 5rem; /*define o ESPAÇO entre os itens filhos de um container flex ou grid. Diferente de margin, o gap só cria espaço ENTRE os itens*/
+        padding-left: 3rem; /*Define o espaçamento interno especifico esquerda */
+        padding-right: 3rem; /*Define o espaçamento interno especifico direita */
+      }
+      /*Edição do Titulo*/
+      h1{
+        font-size: 45px;
+        text-align: center;
+      }
+
+      
+      #descricao{
+        font-size: 30px;
+        text-align: center; /*Tipo de alinhamento*/
+        padding-top: 2rem; /*Define o espaçamento interno especifico topo */
+      }
+
+      #botoes button{
+        padding: 1rem; /*Definir o espaço interno geral horizontal e vertical*/
+        font-size: 15px; /*Define o tamanho da fonte dentro dos botões*/
+        width: 7rem;; /*Deixa a largura de todos fixo*/
+        border-radius: 1rem; /*Arredonda os cantos*/
+        cursor: pointer; /*Definir mouse como maozinha de clique*/
+        margin-left: 2rem;
+        
+      }
+
+      .comemorativa{
+        font-size: 30px;
+        text-align: center;
+      }
+
+      .tipicas{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /*define quantas colunas o grid vai ter e qual o tamanho de cada uma.*/
+        gap: 1.5rem;
+        max-width: 75rem; /*define a largura MÁXIMA que o elemento pode ter.*/
+        width: 100%;
+        margin: 0 auto;
+        padding: 2rem;
+        box-sizing: border-box; /*muda a forma como o navegador CALCULA a largura/altura total do elemento. Sem isso (padrão: content-box), o padding e a border são somados à largura definida, fazendo o elemento ficar maior do que o esperado.*/
+        font-size: 20px;
+      }
+      .card{
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden; /* define o que acontece quando o conteúdo de um elemento é maior do que o espaço disponível dele.*/
+        text-decoration: none;
+        color: black;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); /*adiciona uma SOMBRA ao redor do elemento.*/
+        transition: transform 0.2s; /*faz uma mudança de propriedade acontecer de forma SUAVE (com animação), em vez de mudar instantaneamente.*/
+      }
+
+      .card:hover{
+        transform: scale(1.03); /*aplica transformações visuais no elemento, 
+   como escala, rotação, ou movimento — sem afetar o layout ao redor.*/
+      }
+
+      .card img{
+        width: 100%;
+        height: 150px;
+        object-fit: cover; /*define COMO uma imagem (ou vídeo) se ajusta dentro da caixa que ela ocupa, quando a proporção da imagem não é igual à proporção da caixa (width/height definidos)*/
+        display: block;
+      }
+
+      .card h3{
+        text-align: center;
+        padding: 10px;
+        margin: 0;
+      }
+
+      @media (max-width: 600px){
+        .tipicas{
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
+          padding: 1rem;
+        }
+      }
+      @media (max-width: 350px){
+        .tipicas{
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+
+    <script>
+      function esconderTexto(){
+      document.getElementById("descricao").style.display ="none";
+      }
+    </script>
+  </body>
+</html>
