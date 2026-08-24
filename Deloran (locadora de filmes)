@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeLorean</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>DeLorean</h1>
+        <div class="ct">
+            <button class="btn">Alugar Filmes</button>
+        </div>
+    </header>
+
+    <p class="sobre">Bem-vindo à DeLorean Locadora de Filmes. Não somos uma simples locadora, somos uma maquina do tempo, onde é possível vivevenciar uma vida do passado como se você estivesse dentro de um  DeLorean, ou caso goste de algo mais mágico atravessar uma parede de tijolos em uma estação ou até mesmo entrar em um guarda-roupa pra vivenciar esse mundo mágico. E tudo isso é possível no conforto de sua casa ou de amigos atráves de um único CD ou Fita. Venha vivenciar esse lado da vida. </p>
+
+    <div class="genero">
+        <button class="generos">Todos</button>
+        <button class="generos">Fantasia</button>
+        <button class="generos">Magia</button>
+        <button class="generos">Ficção Científica</button>
+        <button class="generos">Terror</button>
+    </div>
+
+    <div class="filme">
+        <a href="" class="movie">
+            <img src="star-wars.html" alt="Star Wars O ultimo Jedi">
+            <h3>Star Wars O ultimo Jedi</h3>
+            <p class="description">Uma galáxia muito, muito distante...</p>
+            <button class="categoria">Fantasia</button>
+        </a>
+        <a href="" class="movie">
+            <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/1/1d/Harry_Potter_Pedra_Filosofal_2001.jpg/330px-Harry_Potter_Pedra_Filosofal_2001.jpg?utm_source=pt.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Harry Potter e a Pedra Filosofal">
+            <h3>Harry Potter e a Pedra Filosofal</h3>
+            <p class="description">Um jovem bruxo descobre seu destino...</p>
+            <button class="categoria">Magia</button>
+        </a>
+        <a href="https://redecanais.capital/o-senhor-dos-aneis-a-sociedade-do-anel-dublado-2001-1080p_2b29fe11d.html" class="movie">
+            <img src="https://m.media-amazon.com/images/M/MV5BNmRhNGRmNDQtMmI3Yy00OTRjLThjOWEtMmEwZmMxNTFjMWQ3XkEyXkFqcGc@._V1_.jpg" alt="Senhor dos Anéis e a Sociedade do Anel">
+            <h3>Senhor dos Anéis e a Sociedade do Anel</h3>
+            <p class="description">Um jovem hobbit parte em uma jornada para destruir um anel misterioso...</p>
+            <button class="categoria">Fantasia</button>
+        </a>
+        <a href="" class="movie">
+            <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/0/0c/As_Cronicas_de_Narnia.jpg/330px-As_Cronicas_de_Narnia.jpg" alt="As Crônicas de Nárnia">
+            <h3>As Crônicas de Nárnia</h3>
+            <p class="description">Quatro irmãos descobrem um mundo mágico através de uma roupa...</p>
+            <button class="categoria">Fantasia</button>
+        </a>
+        <a href="" class="movie">
+            <img src="de-volta-pro-futuro.html" alt="De Volta Pro Futuro">
+            <h3>De Volta Pro Futuro</h3>
+            <p class="description">Um homem viaja no tempo e precisa voltar para o presente...</p>
+            <button class="categoria">Ficção Científica</button>
+        </a>
+        <a href="" class="movie">
+            <img src="sexta-seira-13.html" alt="Sexta-Feira 13">
+            <h3>Sexta-Feira 13</h3>
+            <p class="description">Um assassino mascarado aterroriza um acampamento...</p>
+            <button class="categoria">Terror</button>
+        </a>
+    </div>
+    <footer>
+        <p>&copy; 2026 DeLorean Locadora de Filmes. Todos os direitos reservados.</p>
+        <div class="Rede-sociais">
+            <a href="">Instagram do criador</a>
+        </div>
+        <p> Endereço: Em algum lugar do Multiverso | Telefone: (212) 555-0113</p>
+    </footer>
+<style>
+
+    body{
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--lavanda-claro);
+        color: var(--preto);
+    }
+    header{
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    h1{
+        font-family: 'Anton', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 4rem;
+    text-align: center;
+    letter-spacing: 2px;
+    color: var(--vermelho);
+    text-shadow:
+        -3px -3px 0 var(--preto),
+        3px -3px 0 var(--preto),
+        -3px 3px 0 var(--preto),
+        3px 3px 0 var(--preto),
+        6px 6px 0 var(--roxo-escuro);
+    transform: skewX(-5deg);
+    margin: 0.5rem 0;
+    }
+    .ct{
+        display: flex;
+        justify-content: end;
+        font-size: 50px;
+    }
+
+    .btn{
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+        background-color: var(--vermelho);
+        color: var(--branco);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .btn:hover{
+        background-color: var(--vermelho-escuro);
+    }
+
+    .sobre{
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        background-color: var(--cinza-claro);
+        color: var(--preto);
+        font-family:'Times New Roman', Times, serif
+    }
+    .genero{
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        
+    }
+
+    .generos{
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        background-color: var(--roxo);
+        color: var(--branco);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .generos:hover{
+        background-color: var(--roxo-escuro);
+    }
+    .filme{
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap:1.5rem;
+        max-width: 75rem;
+        width: 100%;
+        padding: 2rem;
+        box-sizing: border-box;
+        font-size: 20px;
+    }
+
+    .movie{
+        width: 100%;
+        border: 1px solid var(--cinza);
+        border-radius: 8px;
+        overflow: hidden;
+        text-decoration: none;
+        color: black;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+        background-color: var(--branco);
+    }
+
+    .movie:hover{
+        transform: translateY(-8px) scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
+    }
+
+    .movie img{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    }
+
+    h3{
+        text-align: center;
+        font-size: 1.5rem;
+        margin: 0.5rem 0;
+    }
+
+    .description{
+        text-align: center;
+        font-size: 0.95rem;
+        margin: 0.5rem 0;
+    }
+    .categoria{
+        background-color: var(--vermelho);
+        color: var(--branco);
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        text-align: end;
+     
+    }
+    footer{
+        background-color: var(--preto);
+        color: var(--cinza-claro);
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    footer a{
+        color: var(--lavanda);
+        margin: 0 10px;
+        text-decoration: none;
+    }
+
+    :root{
+    --preto: #1a1a1a;
+    --branco: #ffffff;
+    --cinza-claro: #e8e8e8;
+    --cinza: #6b6b6b;
+    --roxo-escuro: #3d0a5c;
+    --roxo: #6a0dad;
+    --lavanda: #b19cd9;
+    --lavanda-claro: #e6dcf5;
+    --vermelho: #d90429;
+    --vermelho-escuro: #8a0303;
+    }
+</style>
+</body>
+</html>
